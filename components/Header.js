@@ -3,6 +3,8 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { appName } from '@/lib/config'
+import { secletWord } from '@/lib/config'
+
 
 const links = [
   { href: '/', label: 'TODO' },
@@ -16,6 +18,7 @@ export default function Header() {
   return (
     <header className="header">
     <span className="app-name">{appName}</span>
+    <p>{ secletWord }</p>
     
       <nav>
         {links.map((link) => (
